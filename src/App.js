@@ -1,25 +1,45 @@
 import logo from './logo.svg';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
+import React from 'react';
+import Card from './Card';
+import Head from './Head';
+import Skill from './Skill';
+import About from './About';
+import Top from './Top';
+import Music from './Music_component/Music';
+import Product from './Product_component/Product';
+import Research from './Research';
+import Foot from './Foot';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+
+      <BrowserRouter>
+        <Head />
+        <div className='container-fluid my_main'>
+          <Routes>
+            <Route path="/" element={<Top />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/skill" element={<Skill />} />
+            <Route path="/music" element={<Music />} />
+          </Routes>
+        </div>
+        <Foot />
+
+      </BrowserRouter>
+
+
+
+    );
+  }
+
 }
-
 export default App;
