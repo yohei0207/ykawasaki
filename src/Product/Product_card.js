@@ -16,7 +16,9 @@ class Product_card extends React.Component {
                 
                     {this.props.tags.map((tag) => {
                         return (
-                            <span class="badge badge-pill badge-success">{tag}</span>
+                            
+                            <span class="badge badge-pill my-badge">{tag}</span>
+                            
 
                         );
                     })}
@@ -25,7 +27,7 @@ class Product_card extends React.Component {
                     <p></p>
                     <img src={this.props.img} class="img-fluid" />
                     <p></p>
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target={this.props.id_target}>More</button>
+                    <button type="button" class="btn my-badge" data-toggle="modal" data-target={this.props.id_target}>More</button>
 
                     <div class="modal fade" id={this.props.id_num} tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -37,15 +39,20 @@ class Product_card extends React.Component {
                                     </button>
                                 </div>
                                 <div class="modal-body">
+
+                                    
                                     {this.props.tags.map((tag) => {
                                         return (
-                                            <span class="badge badge-pill badge-success">{tag}</span>
+                                            <span class="badge badge-pill my-badge">{tag}</span>
                                         );
                                     })}
                                     <p></p>
                                     <img src={this.props.img} class="img-fluid" />
                                     <p></p>
-                                    <p>{this.props.description}</p>
+                                    <p>{this.props.description}</p> 
+                                    
+
+
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

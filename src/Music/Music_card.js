@@ -20,7 +20,7 @@ class Music_card extends React.Component {
                    
                     {this.props.tags.map((tag) => {
                         return (
-                            <span class="badge badge-pill badge-success">{tag}</span>
+                            <span class="badge badge-pill my-badge">{tag}</span>
                             
                         );
                     })}

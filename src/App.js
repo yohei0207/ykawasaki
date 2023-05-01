@@ -5,6 +5,7 @@ import Product from "./Product/Product";
 import Music from "./Music/Music";
 import Top from "./Top";
 import Head from './Head';
+import Foot from './Foot';
 
 //参考サイト
 //https://www.sukerou.com/2022/03/github-pages-react.html
@@ -22,6 +23,7 @@ function App() {
             <Route path={`${process.env.PUBLIC_URL}/music`} element={<Music />} />
           </Routes>
         </div>
+        <Foot/>
 
       </BrowserRouter>
 

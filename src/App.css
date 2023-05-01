@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: rgb(234, 228, 209);
+}
+.my-name {
+  color: white;
+  font-weight: 600;
+}
+
+.my-bg {
+  background-color: rgb(108, 134, 80);
+}
+.my-badge {
+  background-color: rgb(108, 134, 80);
+  color: white;
+}
+
+.my-card {
+  background-color: rgba(148, 68, 68, 0.115);
+}
